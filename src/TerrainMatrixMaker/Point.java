@@ -17,6 +17,14 @@ public class Point {
         this.depth = 0.0;
     }
 
+    @Override
+    public String toString() {
+        return "" +
+                x + ";" +
+                z + ";" +
+                depth + "\n";
+    }
+
     public double getX() {
         return x;
     }
