@@ -17,6 +17,13 @@ public class Point {
         this.depth = 0.0;
     }
 
+    public Point(String str) throws NullPointerException{
+        String[] coord = str.split(";");
+        this.x = Double.parseDouble(coord[0]);
+        this.z = Double.parseDouble(coord[1]);
+        this.depth = Double.parseDouble(coord[2]);
+    }
+
     @Override
     public String toString() {
         return "" +
