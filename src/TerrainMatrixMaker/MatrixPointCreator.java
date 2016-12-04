@@ -9,16 +9,16 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class MatrixPointCreator {
-    private static int rows = 1000;
-    private static int columns = 2000;
-    static Point[][] terrain = new Point[rows][columns];
+    private static final double rows = 100; //1000
+    private static final double columns = 200; // 2000
+    static Point[][] terrain = new Point[(int)rows][(int)columns];
 
     public MatrixPointCreator() {
-       for (int i = 0; i < 1000; i++){
-           for (int j = 0; j < 2000; j++){
-               double depth = 0;
+       for (int i = 0; i < rows; i++){
+           for (int j = 0; j < columns; j++){
+               //double depth = 0;
 
-               terrain[i][j] = new Point ((double) ((i+1)/(rows/10)), (double) ((j+1)/(columns/10)), (Math.sin((double) (j+1/columns)))* Math.sin((double) (i+1/rows)));
+               terrain[i][j] = new Point (((i+1)/(rows/10)), ((j+1)/(columns/10)), (Math.sin((j+1/columns)))* Math.sin((i+1/rows)));
 
            }
        }
@@ -41,4 +41,7 @@ public class MatrixPointCreator {
 
     }
 
+    public static Point[][] getTerrain() {
+        return terrain;
+    }
 }
