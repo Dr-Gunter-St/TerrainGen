@@ -9,8 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class MatrixPointCreator {
-    private static final double rows = 100; //1000
-    private static final double columns = 200; // 2000
+    private static final double rows = 124; //1000
+    private static final double columns = 124; // 2000
     static Point[][] terrain = new Point[(int)rows][(int)columns];
 
     public MatrixPointCreator() {
